@@ -28,7 +28,7 @@ MedConsume is a medicine management and inventory tracking application developed
 ### Backend
 
 * Java
-* Spring Framework
+* SpringBoot Framework
 * Hibernate
 
 ### Database
