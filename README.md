@@ -1,36 +1,51 @@
-# MedConsume - Medicine Verification Platform (Spring Boot)
+# MedConsume
 
-## What this project includes
-- Spring Boot (REST) backend
-- H2 in-memory database (easy to run)
-- Entities: User, Medicine, TestRequest, LabReport, Complaint
-- Repositories, Services, Controllers (simple, clear architecture)
-- OpenAPI UI (Swagger) available at `/swagger-ui.html` when running
-- Seed data inserted at startup
+## Introduction
 
-## How to run
-1. Ensure you have Java 17+ and Maven installed.
-2. Unzip the project and open a terminal at project root.
-3. Run:
-   ```
-   mvn spring-boot:run
-   ```
-4. The app runs on `http://localhost:8080`.
-5. H2 console: `http://localhost:8080/h2-console` (jdbc url: `jdbc:h2:mem:meddb`)
-6. API examples:
-   - GET `/api/medicines` - list medicines
-   - POST `/api/medicines` - create medicine (JSON body)
-   - POST `/api/tests` - request a test
-   - POST `/api/reports` - lab submits report
-   - POST `/api/complaints` - file a complaint
-   - GET `/api/admin/dashboard` - admin overview
+MedConsume is a medicine management and inventory tracking application developed to streamline the process of maintaining medicine records and monitoring stock availability. The system enables efficient management of medicine-related information, helping users organize inventory data, track medicine availability, and reduce the risk of stock mismanagement. The application provides a structured and user-friendly approach to handling healthcare inventory operations.
 
-## Notes & Next steps
-- This is a minimal viable version intended for local development and learning.
-- For production, add:
-  - Authentication & Authorization (JWT / OAuth2)
-  - Persistent DB (MySQL / PostgreSQL)
-  - File storage for lab reports (S3), email notifications
-  - Robust validation, DTOs, exception handling, logging
-  - Tests (unit + integration)
-  - Containerization (Docker) and CI/CD
+## Features
+
+* Add, update, and delete medicine records.
+* Maintain detailed information about medicines.
+* Track medicine inventory and stock availability.
+* Search and view medicine details efficiently.
+* Manage medicine records through an intuitive interface.
+* Store and retrieve data using a relational database.
+* Ensure organized and accurate inventory management.
+
+## Advantages
+
+* Reduces manual effort in maintaining medicine records.
+* Improves inventory organization and accessibility.
+* Helps prevent stock shortages and data inconsistencies.
+* Enhances accuracy in medicine tracking and management.
+* Provides a centralized system for medicine-related information.
+* Simplifies healthcare inventory operations.
+
+## Tech Stack
+
+### Backend
+
+* Java
+* Spring Framework
+* Hibernate
+
+### Database
+
+* MySQL
+
+### Build Tool
+
+* Maven
+
+### Frontend
+
+* JSP
+* HTML
+* CSS
+
+### Development Tools
+
+* IntelliJ IDEA
+* Apache Tomcat
