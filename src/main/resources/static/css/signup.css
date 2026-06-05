@@ -1,0 +1,96 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background-color: #f5fdfc;
+    color: #084c61;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px 60px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #084c61;
+    font-weight: 500;
+}
+
+.nav-buttons button {
+    padding: 8px 18px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: #d2f4e6;
+}
+
+.signup-btn {
+    background-color: #2ca58d;
+    color: white;
+}
+
+
+.signup-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.signup-container {
+    display: flex;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    gap: 40px;
+}
+
+.illustration-section {
+    text-align: center;
+}
+
+.illustration-section img {
+    width: 200px;
+}
+
+.form-section {
+    width: 350px;
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    border: 2px solid #b7e4c7;
+    outline: none;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background: #2ca58d;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}

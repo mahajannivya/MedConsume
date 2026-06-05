@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pending Users</title>
+    <link rel="stylesheet" href="/css/pendingusers.css">
+</head>
+
+<body>
+
+
+<div class="navbar">
+    <h2 class="logo">Admin Panel</h2>
+    <ul class="nav-links">
+        <li><a href="/admin">Dashboard</a></li>
+        <li><a class="active">Pending Users</a></li>
+        <li><a href="/home">Logout</a></li>
+    </ul>
+</div>
+
+<div class="container">
+
+
+    <div class="header">
+        <h2>Pending User Approvals</h2>
+        <p>Review and manage users awaiting approval.</p>
+    </div>
+
+
+
+
+    <!-- Pending Users List -->
+    <h3 class="section-title">Pending Users</h3>
+
+    <div id="pending-container" class="pending-list">
+
+    </div>
+
+</div>
+
+<script>
+    // Load Pending Users
+    fetch('/api/admin/pending-users')
+        .then(res => res.json())
+        .then(users => {
+            let html = "";
+            users.forEach(u => {
+                html += `
+                <div class="user-card">
+                    <div class="info">
+                        <h3>${u.fullname}</h3>
+                        <p>${u.email}</p>
+                    </div>
+                    <div class="actions">
+                        <button class="btn approve" onclick="approve(${u.id})">Approve</button>
+                        <button class="btn reject" onclick="rejectUser(${u.id})">Reject</button>
+                    </div>
+                </div>
+                `;
+            });
+            document.getElementById("pending-container").innerHTML = html;
+        });
+
+    function approve(id){
+        fetch('/api/admin/approve/' + id, { method: 'POST'})
+            .then(() => location.reload());
+    }
+
+    function rejectUser(id){
+        fetch('/api/admin/reject/' + id, { method: 'POST'})
+            .then(() => location.reload());
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedConsume | Feedback</title>
+    <link rel="stylesheet" href="/css/feedback.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<nav class="navbar">
+    <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/3209/3209993.png" alt="MedConsume Logo"
+             style="width: 35px; vertical-align: middle; margin-right: 8px;">
+        <span>MedConsume</span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/feedback">Feedback</a></li>
+    </ul>
+</nav>
+
+
+<section class="feedback-section">
+    <div class="feedback-container">
+        <h1>Share Your Feedback</h1>
+        <p>We value your opinion! Whether you have a complaint or a request, please let us know.</p>
+
+
+        <form th:action="@{/feedback}" method="post" id="feedbackForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label for="type">Feedback Type</label>
+                <select id="type" name="type" required>
+                    <option value="">-- Select --</option>
+                    <option value="complaint">Complaint</option>
+                    <option value="request">Request</option>
+                </select>
+            </div>
+
+            <div id="complaintFields" style="display: none;">
+                <div class="form-group">
+                    <label for="medicine">Medicine Name</label>
+                    <input type="text" id="medicine" name="medicine" placeholder="Enter medicine name">
+                </div>
+                <div class="form-group">
+                    <label for="problem">Describe Your Problem</label>
+                    <textarea id="problem" name="problem" rows="4" placeholder="Write your complaint..."></textarea>
+                </div>
+            </div>
+
+            <div id="requestFields" style="display: none;">
+                <div class="form-group">
+                    <label for="message">Request Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Write your request..."></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Feedback</button>
+
+
+            <p th:if="${param.success}" style="color: green; text-align: center; margin-top: 10px;">
+                Thank you! Your feedback has been submitted successfully.
+            </p>
+        </form>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <p>© 2025 MedConsume | All Rights Reserved</p>
+</footer>
+
+<script>
+    const typeSelect = document.getElementById('type');
+    const complaintFields = document.getElementById('complaintFields');
+    const requestFields = document.getElementById('requestFields');
+
+    typeSelect.addEventListener('change', () => {
+        if (typeSelect.value === 'complaint') {
+            complaintFields.style.display = 'block';
+            requestFields.style.display = 'none';
+        } else if (typeSelect.value === 'request') {
+            complaintFields.style.display = 'none';
+            requestFields.style.display = 'block';
+        } else {
+            complaintFields.style.display = 'none';
+            requestFields.style.display = 'none';
+        }
+    });
+</script>
+
+</body>
+</html>

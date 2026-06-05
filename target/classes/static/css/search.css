@@ -1,0 +1,186 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background-color: #f5fdfc;
+    color: #084c61;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px 60px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: #084c61;
+}
+
+.logo img {
+    width: 35px;
+    margin-right: 8px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #084c61;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #2ca58d;
+}
+
+.nav-buttons a button {
+    margin-left: 10px;
+    padding: 8px 18px;
+    border-radius: 25px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.login-btn {
+    background-color: #d2f4e6;
+    color: #084c61;
+}
+
+.signup-btn {
+    background-color: #2ca58d;
+    color: white;
+}
+
+.nav-buttons button:hover {
+    transform: scale(1.05);
+}
+
+
+.search-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 20px;
+    min-height: 80vh;
+}
+
+.search-card {
+    background-color: #e7f9f5;
+    width: 650px;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.search-card h2 {
+    color: #084c61;
+    margin-bottom: 25px;
+}
+
+.search-card form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.search-card input[type="text"] {
+    width: 70%;
+    padding: 12px;
+    border: 2px solid #2ca58d;
+    border-radius: 20px;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(44, 165, 141, 0.1);
+}
+
+.search-card input[type="text"]:focus {
+    border-color: #249b81;
+    box-shadow: 0 0 12px rgba(44, 165, 141, 0.3);
+}
+
+.search-card button {
+    padding: 12px 25px;
+    background-color: #2ca58d;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-card button:hover {
+    background-color: #249b81;
+}
+
+
+.empty-state {
+    margin-top: 20px;
+}
+
+.empty-state img {
+    width: 120px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+
+.result-box {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.medicine-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.medicine-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.medicine-card h3 {
+    margin: 0 0 10px;
+    color: #2ca58d;
+    font-weight: 600;
+}
+
+.medicine-card p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+.no-results {
+    margin-top: 20px;
+    color: #a94442;
+    font-weight: 500;
+}

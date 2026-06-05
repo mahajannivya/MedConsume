@@ -1,0 +1,121 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f8fdfc;
+    color: #2e4b4b;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 20px;
+    color: #2e4b4b;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2e4b4b;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #007b7f;
+}
+
+/* Feedback Section */
+.feedback-section {
+    background-color: #4a8d8d;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.feedback-container {
+    background-color: white;
+    color: #2e4b4b;
+    border-radius: 12px;
+    padding: 40px;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.feedback-container h1 {
+    color: #007b7f;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.feedback-container p {
+    margin-bottom: 30px;
+    font-size: 15px;
+    color: #555;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #007b7f;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #007b7f;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #00696b;
+}
+
+.footer {
+    text-align: center;
+    background-color: #e9f7f6;
+    padding: 20px;
+    font-size: 14px;
+    color: #2e4b4b;
+}

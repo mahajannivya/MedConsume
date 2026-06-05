@@ -1,0 +1,96 @@
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background-color: #f5fdfc;
+    color: #084c61;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px 60px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #084c61;
+    font-weight: 500;
+}
+
+.nav-buttons button {
+    padding: 8px 18px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.login-btn {
+    background-color: #d2f4e6;
+}
+
+.signup-btn {
+    background-color: #2ca58d;
+    color: white;
+}
+
+/* SUCCESS PAGE CONTAINER */
+.success-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 70px 20px;
+}
+
+.success-box {
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.success-box img {
+    width: 170px;
+    margin-bottom: 20px;
+}
+
+.success-box h2 {
+    color: #2ca58d;
+    margin-bottom: 10px;
+}
+
+.success-box p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #2ca58d;
+    font-weight: 600;
+}
+
+.home-btn {
+    padding: 12px 25px;
+    background: #2ca58d;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    font-size: 16px;
+}

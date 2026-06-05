@@ -1,0 +1,88 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f8fdfc;
+    color: #2e4b4b;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 20px;
+    color: #2e4b4b;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2e4b4b;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #007b7f;
+}
+
+.nav-buttons button {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.login-btn {
+    background-color: #e0f7f4;
+    color: #2e4b4b;
+}
+
+.signup-btn {
+    background-color: #007b7f;
+    color: white;
+}
+
+
+.contact-section {
+    background-color: #4a8d8d;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.contact-section h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+}
+
+.footer {
+    text-align: center;
+    background-color: #e9f7f6;
+    padding: 20px;
+    font-size: 14px;
+    color: #2e4b4b;
+}

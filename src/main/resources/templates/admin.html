@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/admin.css" >
+</head>
+
+<body>
+
+
+<nav class="navbar">
+    <h1>Admin Panel</h1>
+
+    <div class="nav-links">
+        <a href="/home">Home</a>
+        <a href="/search">Search</a>
+        <a href="/home" class="logout">Logout</a>
+    </div>
+</nav>
+
+
+
+<div class="container">
+
+
+    <div class="dashboard-header" style="text-align:center; margin-bottom:30px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/3209/3209993.png"
+             class="admin-icon"
+             style="width:80px; margin-bottom:10px;">
+        <h2 style="font-weight:600; color:#1d3557;">Welcome Admin</h2>
+    </div>
+
+
+    <h3 class="section-title">Dashboard Overview</h3>
+
+    <div class="card-grid">
+
+        <a href="/pendingusers" class="card-link">
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2910/2910791.png" class="card-icon">
+            <h3>Pending Users</h3>
+            <p>View and Approve Registrations</p>
+        </div>
+        </a>
+
+        <a href="/medicinesedit" class="card-link">
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2965/2965592.png" class="card-icon">
+            <h3>Medicines</h3>
+            <p>Manage Medicine Database</p>
+        </div>
+    </a>
+
+        <a href="/complain" class="card-link">
+            <div class="card card-long">
+                <img src="https://cdn-icons-png.flaticon.com/512/1048/1048949.png" class="card-icon">
+                <h3>Complaints & Requests</h3>
+                <p>Handle User Complaints and Requests in one place</p>
+            </div>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f8fafb;
+  color: #1c3b3b;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1c3b3b;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2b4a4a;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #1b7a6d;
+}
+
+.nav-buttons button {
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.login-btn {
+  background-color: #d9ece7;
+  color: #1c3b3b;
+}
+
+.signup-btn {
+  background-color: #1b7a6d;
+  color: white;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e8f5f1;
+  margin: 40px auto;
+  width: 85%;
+  border-radius: 20px;
+  padding: 40px 60px;
+}
+
+.hero-text h1 {
+  color: #1c3b3b;
+  font-size: 34px;
+  line-height: 1.4;
+}
+
+.hero-text p {
+  margin-top: 10px;
+  color: #476363;
+  font-size: 16px;
+}
+
+.cta-btn {
+  margin-top: 20px;
+  background-color: #1b7a6d;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  opacity: 0.85;
+}
+
+.hero-image img {
+  width: 250px;
+}
+
+.about {
+  background-color: #edf2f6;
+  border-radius: 20px;
+  width: 85%;
+  margin: 30px auto;
+  text-align: center;
+  padding: 40px;
+}
+
+.about h2 {
+  font-size: 26px;
+  color: #1c3b3b;
+  margin-bottom: 15px;
+}
+
+.about p {
+  color: #476363;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(28, 59, 59, 0.6); /* transparent dim background */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  z-index: 999;
+}
+
+.popup-overlay:target {
+  display: flex;
+}
+
+
+.popup-card {
+  background: #fff;
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  width: 400px;
+  animation: fadeIn 0.3s ease;
+}
+
+.popup-card h2 {
+  color: #1b7a6d;
+  margin-bottom: 15px;
+}
+
+.popup-card p {
+  color: #476363;
+  margin-bottom: 25px;
+}
+
+.popup-buttons .login-btn,
+.popup-buttons .signup-btn {
+  border: none;
+  padding: 10px 25px;
+  margin: 0 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.popup-buttons .login-btn {
+  background-color: #d9ece7;
+  color: #1c3b3b;
+}
+
+.popup-buttons .signup-btn {
+  background-color: #1b7a6d;
+  color: white;
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  text-decoration: none;
+  font-size: 28px;
+  color: #888;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  color: #1b7a6d;
+}
+
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

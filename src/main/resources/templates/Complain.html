@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Complaints</title>
+    <link rel="stylesheet" href="/css/complain.css">
+</head>
+<body>
+<!-- Topbar -->
+<div class="topbar">
+    <h2>Admin Panel - User Complaints</h2>
+    <a href="/home" class="logout-btn">Logout</a>
+</div>
+
+<div class="container">
+    <h3>All User Complaints</h3>
+
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Consumer ID</th>
+            <th>Subject</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Created At</th>
+        </tr>
+        </thead><tbody>
+    <tr th:each="c : ${complaints}">
+        <td th:text="${c.id}">1</td>
+        <td th:text="${c.consumer_id}">101</td>
+        <td th:text="${c.subject}">Delay</td>
+        <td th:text="${c.description}">Late delivery of medicine</td>
+        <td th:text="${c.status}">Pending</td>
+        <td th:text="${#dates.format(c.created_at, 'dd-MM-yyyy HH:mm')}">20-11-2025 20:30</td>
+        <td>
+            <form th:if="${c.status != 'Resolved'}" action="/adminn/updateComplaintStatus" method="post" style="display:inline-block;">
+                <input type="hidden" name="id" th:value="${c.id}">
+                <input type="hidden" name="status" value="Resolved">
+                <button type="submit" class="resolve-btn">Mark Resolved</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+
+
+    </table>
+</div>
+</body>
+</html>

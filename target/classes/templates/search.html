@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedConsume | Search Medicine</title>
+    <link rel="stylesheet" href="/css/search.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<nav class="navbar">
+    <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/3209/3209993.png"
+             alt="MedConsume Logo">
+        <span>MedConsume</span>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/feedback">Feedback</a></li>
+    </ul>
+
+</nav>
+
+
+<section class="search-section">
+    <div class="search-card">
+        <h2>🔍 Search Medicines</h2>
+        <form th:action="@{/search}" method="get">
+            <input type="text" name="keyword" placeholder="Enter medicine name..." th:value="${keyword}" required />
+            <button type="submit">Search</button>
+        </form>
+
+
+        <div th:if="${keyword == null or #strings.isEmpty(keyword)}" class="empty-state">
+            <img src="https://cdn-icons-png.flaticon.com/512/2920/2920244.png" alt="Search Illustration">
+            <p>Search your medicine here </p>
+        </div>
+
+
+        <div th:if="${medicines != null and !medicines.isEmpty()}" class="result-box">
+            <div th:each="medicine : ${medicines}" class="medicine-card">
+                <h3 th:text="${medicine.medicineName}"></h3>
+                <p><strong>ID:</strong> <span th:text="${medicine.id}"></span></p>
+                <p><strong>Manufacturer:</strong> <span th:text="${medicine.manufacturer}"></span></p>
+                <p><strong>Status:</strong> <span th:text="${medicine.status}"></span></p>
+                <p><strong>Strength:</strong> <span th:text="${medicine.strength}"></span> mg</p>
+                <p><strong>Category:</strong> <span th:text="${medicine.category}"></span></p>
+                <p><strong>Storage Form:</strong> <span th:text="${medicine.storageForm}"></span></p>
+                <p><strong>Indication:</strong> <span th:text="${medicine.indication}"></span></p>
+                <p><strong>Classification:</strong> <span th:text="${medicine.classification}"></span></p>
+            </div>
+        </div>
+
+
+        <div th:if="${medicines != null and medicines.isEmpty() and keyword != null}" class="no-results">
+            <p>No medicines found for "<span th:text="${keyword}"></span>".</p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
